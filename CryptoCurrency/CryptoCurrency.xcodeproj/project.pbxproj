@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC2B78252591BA2900B137B1 /* CryptoCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */; };
+		AC87858225945AF700A20B02 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87858125945AF700A20B02 /* Repository.swift */; };
 		ACDF4D452591B47E0062029C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF4D442591B47E0062029C /* AppDelegate.swift */; };
 		ACDF4D472591B47E0062029C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF4D462591B47E0062029C /* SceneDelegate.swift */; };
 		ACDF4D492591B47E0062029C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF4D482591B47E0062029C /* MainView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyModel.swift; sourceTree = "<group>"; };
+		AC87858125945AF700A20B02 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		ACDF4D412591B47E0062029C /* CryptoCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDF4D442591B47E0062029C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDF4D462591B47E0062029C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				ACDF4D482591B47E0062029C /* MainView.swift */,
 				ACDF4D742591B8680062029C /* MainViewModel.swift */,
 				AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */,
+				AC87858125945AF700A20B02 /* Repository.swift */,
 				ACDF4D4A2591B4830062029C /* Assets.xcassets */,
 				ACDF4D4F2591B4830062029C /* LaunchScreen.storyboard */,
 				ACDF4D522591B4830062029C /* Info.plist */,
@@ -278,6 +281,7 @@
 				AC2B78252591BA2900B137B1 /* CryptoCurrencyModel.swift in Sources */,
 				ACDF4D492591B47E0062029C /* MainView.swift in Sources */,
 				ACDF4D752591B8680062029C /* MainViewModel.swift in Sources */,
+				AC87858225945AF700A20B02 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

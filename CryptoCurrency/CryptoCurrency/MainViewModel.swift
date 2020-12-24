@@ -13,4 +13,12 @@ class MainViewModel: ObservableObject {
         CryptoCurrencyModel(title: "AAPL", subtitle: "Apple Inc", value: "128.23", percentDiff: "+1.24%"),
         CryptoCurrencyModel(title: "DIS", subtitle: "The Walt Disney Company", value: "170.69", percentDiff: "-1.27%"),
         CryptoCurrencyModel(title: "MRNA", subtitle: "Moderna, Inc.", value: "138.30", percentDiff: "-1.38%")]
+    
+    var repository: MainRepository = .init()
+    
+    init() {
+        repository.fetchLatestCurrencies(completionHandler: { currencies in
+            // TODO: convert response to ui elements
+        })
+    }
 }
