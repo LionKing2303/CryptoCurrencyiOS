@@ -26,7 +26,9 @@ struct CurrencyView: View {
                 Text(model.value)
                     .foregroundColor(Color.primary)
                 Text(model.percentDiff)
+                    .padding(5.0)
                     .foregroundColor(Color.primary)
+                    .background(model.positivePercent ? Color.green : Color.red)
             }
         }
         .background(Color.clear)

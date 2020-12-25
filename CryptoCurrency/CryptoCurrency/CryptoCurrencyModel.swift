@@ -13,6 +13,10 @@ struct CryptoCurrencyModel: Hashable {
     let subtitle: String
     let value: String
     let percentDiff: String
+    
+    var positivePercent: Bool {
+        !percentDiff.contains("-")
+    }
 }
 
 struct CurrencyResponseModel: Codable {

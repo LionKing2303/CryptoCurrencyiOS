@@ -6,19 +6,32 @@
 //  Copyright © 2020 Arie Peretz. All rights reserved.
 //
 
+import Foundation
 import Combine
 
 class MainViewModel: ObservableObject {
-    @Published var currencies: [CryptoCurrencyModel] = [
-        CryptoCurrencyModel(title: "AAPL", subtitle: "Apple Inc", value: "128.23", percentDiff: "+1.24%"),
-        CryptoCurrencyModel(title: "DIS", subtitle: "The Walt Disney Company", value: "170.69", percentDiff: "-1.27%"),
-        CryptoCurrencyModel(title: "MRNA", subtitle: "Moderna, Inc.", value: "138.30", percentDiff: "-1.38%")]
+    @Published var currencies: [CryptoCurrencyModel] = []
     
     var repository: MainRepository = .init()
     
     init() {
         repository.fetchLatestCurrencies(completionHandler: { currencies in
-            // TODO: convert response to ui elements
+            self.currencies = currencies.data.map { currency in
+                CryptoCurrencyModel(
+                    title: currency.symbol,
+                    subtitle: currency.name,
+                    value: self.format(value: currency.quote.usd.price),
+                    percentDiff: self.format(value:currency.quote.usd.percentChange24H) + "%"
+                )
+            }
         })
+    }
+    
+    private func format(value: Double) -> String {
+        let numberFormatter: NumberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter.string(for: value) ?? ""
     }
 }

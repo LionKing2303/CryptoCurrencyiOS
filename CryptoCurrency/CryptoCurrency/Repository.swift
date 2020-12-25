@@ -51,10 +51,8 @@ class MainRepository: Repository {
     var cancellable: AnyCancellable?
     func fetchLatestCurrencies(completionHandler: @escaping ((CurrencyResponseModel) -> Void)) {
         cancellable = CryproCurrencyAPI.latestCurrencies()
-        .print()
         .sink(receiveCompletion: { _ in },
               receiveValue: { value in
-                print(value)
                 completionHandler(value)
         })
         
