@@ -1,0 +1,112 @@
+{
+  "status": {
+    "timestamp": "2020-12-28T06:05:54.213Z",
+    "error_code": 0,
+    "error_message": null,
+    "elapsed": 17,
+    "credit_count": 1,
+    "notice": null,
+    "total_count": 4119
+  },
+  "data": [
+    {
+      "id": 1,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "slug": "bitcoin",
+      "num_market_pairs": 9713,
+      "date_added": "2013-04-28T00:00:00.000Z",
+      "tags": [
+        "mineable",
+        "pow",
+        "sha-256",
+        "store-of-value",
+        "state-channels"
+      ],
+      "max_supply": 21000000,
+      "circulating_supply": 18583081,
+      "total_supply": 18583081,
+      "platform": null,
+      "cmc_rank": 1,
+      "last_updated": "2020-12-28T06:04:02.000Z",
+      "quote": {
+        "USD": {
+          "price": 26957.296525404934,
+          "volume_24h": 68563138262.01419,
+          "percent_change_1h": -0.70893824,
+          "percent_change_24h": 0.86986254,
+          "percent_change_7d": 12.88998381,
+          "market_cap": 500949624872.61847,
+          "last_updated": "2020-12-28T06:04:02.000Z"
+        }
+      }
+    },
+    {
+      "id": 1027,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "slug": "ethereum",
+      "num_market_pairs": 5919,
+      "date_added": "2015-08-07T00:00:00.000Z",
+      "tags": [
+        "mineable",
+        "pow",
+        "smart-contracts"
+      ],
+      "max_supply": null,
+      "circulating_supply": 114013424.124,
+      "total_supply": 114013424.124,
+      "platform": null,
+      "cmc_rank": 2,
+      "last_updated": "2020-12-28T06:04:02.000Z",
+      "quote": {
+        "USD": {
+          "price": 713.2904708464586,
+          "volume_24h": 29774391122.29303,
+          "percent_change_1h": 1.95328959,
+          "percent_change_24h": 10.9202263,
+          "percent_change_7d": 10.80825367,
+          "market_cap": 81324688976.22493,
+          "last_updated": "2020-12-28T06:04:02.000Z"
+        }
+      }
+    },
+    {
+      "id": 825,
+      "name": "Tether",
+      "symbol": "USDT",
+      "slug": "tether",
+      "num_market_pairs": 9670,
+      "date_added": "2015-02-25T00:00:00.000Z",
+      "tags": [
+        "store-of-value",
+        "payments",
+        "stablecoin",
+        "stablecoin-asset-backed"
+      ],
+      "max_supply": null,
+      "circulating_supply": 20820866934.028328,
+      "total_supply": 21283323925.552525,
+      "platform": {
+        "id": 1027,
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "slug": "ethereum",
+        "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      },
+      "cmc_rank": 3,
+      "last_updated": "2020-12-28T06:04:08.000Z",
+      "quote": {
+        "USD": {
+          "price": 0.99883213832167,
+          "volume_24h": 98348310591.78598,
+          "percent_change_1h": 0.01077673,
+          "percent_change_24h": -0.00258848,
+          "percent_change_7d": -0.05488581,
+          "market_cap": 20796551041.426468,
+          "last_updated": "2020-12-28T06:04:08.000Z"
+        }
+      }
+    }
+  ]
+}

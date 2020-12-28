@@ -64,8 +64,8 @@ struct MainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainView(viewModel: .init())
-            MainView(viewModel: .init())
+            MainView(viewModel: .init(repository: MockRepository()))
+            MainView(viewModel: .init(repository: MockRepository()))
                 .environment(\.colorScheme, .dark)
         }
     }

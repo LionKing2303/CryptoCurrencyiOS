@@ -12,17 +12,20 @@ import Combine
 class MainViewModel: ObservableObject {
     @Published var currencies: [CryptoCurrencyModel] = []
     
-    var repository: MainRepository = .init()
+    var repository: Repository
     
-    init() {
-        repository.fetchLatestCurrencies(completionHandler: { currencies in
-            self.currencies = currencies.data.map { currency in
-                CryptoCurrencyModel(
-                    title: currency.symbol,
-                    subtitle: currency.name,
-                    value: self.format(value: currency.quote.usd.price),
-                    percentDiff: self.format(value:currency.quote.usd.percentChange24H) + "%"
-                )
+    init(repository: Repository) {
+        self.repository = repository
+        repository.fetchLatestCurrencies(completionHandler: { response in
+            if let currencies = response {
+                self.currencies = currencies.data.map { currency in
+                    CryptoCurrencyModel(
+                        title: currency.symbol,
+                        subtitle: currency.name,
+                        value: self.format(value: currency.quote.usd.price),
+                        percentDiff: self.format(value:currency.quote.usd.percentChange24H) + "%"
+                    )
+                }
             }
         })
     }

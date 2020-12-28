@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC2B78252591BA2900B137B1 /* CryptoCurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */; };
 		AC87858225945AF700A20B02 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87858125945AF700A20B02 /* Repository.swift */; };
+		ACBEC6972599AE3E00B2C7F7 /* three-currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = ACBEC6962599AE3E00B2C7F7 /* three-currencies.json */; };
 		ACDF4D452591B47E0062029C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF4D442591B47E0062029C /* AppDelegate.swift */; };
 		ACDF4D472591B47E0062029C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF4D462591B47E0062029C /* SceneDelegate.swift */; };
 		ACDF4D492591B47E0062029C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF4D482591B47E0062029C /* MainView.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyModel.swift; sourceTree = "<group>"; };
 		AC87858125945AF700A20B02 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		ACBEC6962599AE3E00B2C7F7 /* three-currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "three-currencies.json"; sourceTree = "<group>"; };
 		ACDF4D412591B47E0062029C /* CryptoCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDF4D442591B47E0062029C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACDF4D462591B47E0062029C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACBEC6942599ADEC00B2C7F7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				ACBEC6952599AE0000B2C7F7 /* Mocks */,
+				AC87858125945AF700A20B02 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ACBEC6952599AE0000B2C7F7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				ACBEC6962599AE3E00B2C7F7 /* three-currencies.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		ACBEC6982599AE6600B2C7F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACBEC6992599AE6D00B2C7F7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACDF4D742591B8680062029C /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACBEC69A2599AE7600B2C7F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACDF4D482591B47E0062029C /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ACDF4D382591B47E0062029C = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +150,10 @@
 			children = (
 				ACDF4D442591B47E0062029C /* AppDelegate.swift */,
 				ACDF4D462591B47E0062029C /* SceneDelegate.swift */,
-				ACDF4D482591B47E0062029C /* MainView.swift */,
-				ACDF4D742591B8680062029C /* MainViewModel.swift */,
-				AC2B78242591BA2900B137B1 /* CryptoCurrencyModel.swift */,
-				AC87858125945AF700A20B02 /* Repository.swift */,
+				ACBEC69A2599AE7600B2C7F7 /* View */,
+				ACBEC6992599AE6D00B2C7F7 /* ViewModel */,
+				ACBEC6982599AE6600B2C7F7 /* Model */,
+				ACBEC6942599ADEC00B2C7F7 /* Repository */,
 				ACDF4D4A2591B4830062029C /* Assets.xcassets */,
 				ACDF4D4F2591B4830062029C /* LaunchScreen.storyboard */,
 				ACDF4D522591B4830062029C /* Info.plist */,
@@ -249,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBEC6972599AE3E00B2C7F7 /* three-currencies.json in Resources */,
 				ACDF4D512591B4830062029C /* LaunchScreen.storyboard in Resources */,
 				ACDF4D4E2591B4830062029C /* Preview Assets.xcassets in Resources */,
 				ACDF4D4B2591B4830062029C /* Assets.xcassets in Resources */,

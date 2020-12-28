@@ -44,17 +44,35 @@ extension CryproCurrencyAPI {
 }
 
 protocol Repository {
-    func fetchLatestCurrencies(completionHandler: @escaping ((CurrencyResponseModel) -> Void))
+    func fetchLatestCurrencies(completionHandler: @escaping ((CurrencyResponseModel?) -> Void))
 }
 
 class MainRepository: Repository {
     var cancellable: AnyCancellable?
-    func fetchLatestCurrencies(completionHandler: @escaping ((CurrencyResponseModel) -> Void)) {
+    func fetchLatestCurrencies(completionHandler: @escaping ((CurrencyResponseModel?) -> Void)) {
         cancellable = CryproCurrencyAPI.latestCurrencies()
         .sink(receiveCompletion: { _ in },
               receiveValue: { value in
                 completionHandler(value)
         })
         
+    }
+}
+
+class MockRepository: Repository {
+    enum MockFilename: String {
+        case threeCurrencies = "three-currencies"
+    }
+    
+    func fetchLatestCurrencies(completionHandler: @escaping ((CurrencyResponseModel?) -> Void)) {
+        guard
+            let url = Bundle.main.url(forResource: MockFilename.threeCurrencies.rawValue, withExtension: "json"),
+             let data = try? Data(contentsOf: url),
+             let responseModel = try? JSONDecoder().decode(CurrencyResponseModel.self, from: data)
+        else {
+            completionHandler(nil)
+            return
+        }
+        completionHandler(responseModel)
     }
 }
