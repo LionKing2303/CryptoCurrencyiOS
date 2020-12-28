@@ -24,7 +24,6 @@ struct CurrencyResponseModel: Codable {
     let data: [CurrencyResponseModel.Data]
 }
 
-// MARK: - Data
 extension CurrencyResponseModel {
     struct Data: Codable {
         let id: Int
@@ -55,7 +54,6 @@ extension CurrencyResponseModel {
     }
 }
 
-// MARK: - Platform
 extension CurrencyResponseModel {
     struct Platform: Codable {
         let id: Int
@@ -94,7 +92,7 @@ extension CurrencyResponseModel {
         case trx = "TRX"
     }
 }
-// MARK: - Quote
+
 extension CurrencyResponseModel {
     struct Quote: Codable {
         let usd: Usd
@@ -104,7 +102,7 @@ extension CurrencyResponseModel {
         }
     }
 }
-// MARK: - Usd
+
 extension CurrencyResponseModel {
     struct Usd: Codable {
         let price, volume24H, percentChange1H, percentChange24H: Double
@@ -123,7 +121,6 @@ extension CurrencyResponseModel {
     }
 }
 
-// MARK: - Status
 extension CurrencyResponseModel {
     struct Status: Codable {
         let timestamp: String

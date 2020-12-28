@@ -16,6 +16,10 @@ class MainViewModel: ObservableObject {
     
     init(repository: Repository) {
         self.repository = repository
+        self.fetchLatestCurrencies()
+    }
+    
+    func fetchLatestCurrencies() {
         repository.fetchLatestCurrencies(completionHandler: { response in
             if let currencies = response {
                 self.currencies = currencies.data.map { currency in
